@@ -1,0 +1,42 @@
+<%- include('partial/header.ejs') %>
+<div class="root">
+    <div class="container">
+      <a class="back" href="/">Back</a>
+    <% if(data) {%> <% for(let i=0; i < data.length; i++) { %>
+    <form class="form" action="/update/<%= data[i].id %>" method="post">
+      <label for="name">Name</label>
+      <input type="text" value="<%= data[i].name %>" id="name" name="name" />
+      <label for="description">Description</label>
+      <input
+        type="text"
+        value="<%= data[i].DESCRIPTION %>"
+        id="description"
+        name="DESCRIPTION"
+      />
+      <label for="mark">Mark</label>
+      <input type="text" value="<%= data[i].mark %>" id="mark" name="mark" />
+      <label for="price">Price</label>
+      <input
+        type="number"
+        value="<%= data[i].price %>"
+        class="price"
+        id="price"
+        name="price"
+      />
+      <label for="stock">Stock</label>
+      <input
+        type="number"
+        value="<%= data[i].stock %>"
+        class="stock"
+        id="stock"
+        name="stock"
+      />
+      <div class="buttons">
+        <button type="submit" class="button update">Update</button>
+        <a class="button delete" href="/delete/<%= data[i].id %>">Eliminar</a>
+      </div>
+    </form>
+    <% }%> <% } %>
+</div>
+</div>
+<%- include('partial/footer.ejs') %>

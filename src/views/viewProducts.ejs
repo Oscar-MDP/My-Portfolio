@@ -1,0 +1,48 @@
+<%- include('partial/header.ejs') %>
+
+<div class="root">
+  <div class="container">
+    <div class="container-table">
+      <div class="table">
+        <div class="category-column">
+          <div class="id">ID</div>
+          <div class="items">NAME</div>
+          <div class="items">DESCRIPTION</div>
+          <div class="items">MARK</div>
+          <div class="items">PRICE</div>
+          <div class="items">STOCK</div>
+        </div>
+        <div class="products">
+          <% if(data) {%> <% for(let i=0; i < data.length; i++) { %>
+          <a class="product" href="/select/<%=data[i].id %>">
+            <div class="id"><%= (i + 1) %></div>
+            <div class="item"><%= data[i].name %></div>
+            <div class="item desc"><%= data[i].DESCRIPTION %></div>
+            <div class="item"><%= data[i].mark %></div>
+            <div class="item"><%= data[i].price %></div>
+            <div class="item"><%= data[i].stock %></div>
+          </a>
+          <% }%> <% }%>
+        </div>
+      </div>
+      <div class="buttons">
+        <div></div>
+      </div>
+    </div>
+    <form class="form" action="/add" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" />
+      <label for="description">Description</label>
+      <input type="text" id="description" name="DESCRIPTION" />
+      <label for="mark">Mark</label>
+      <input type="text" id="mark" name="mark" />
+      <label for="price">Price</label>
+      <input type="number" class="price" id="price" name="price" />
+      <label for="stock">Stock</label>
+      <input type="number" class="stock" id="stock" name="stock" />
+      <input type="submit" class="button add" value="Agregar producto" />
+    </form>
+  </div>
+</div>
+
+<%- include('partial/footer.ejs') %>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>List Products NODE MYSQL</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      .products > a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(rgb(175, 173, 173), rgb(75, 75, 75));
+      }
+
+      .items,
+      .item,
+      .product,
+      .form,
+      .buttons,
+      .container {
+        display: flex;
+      }
+
+      .buttons {
+        align-items: center;
+      }
+
+      .back {
+        width: fit-content;
+        height: fit-content;
+        background-color: cyan;
+        padding: 0.3em 1em;
+        text-decoration: none;
+      }
+
+      .container {
+        padding: 1em;
+        height: 80vh;
+        width: 90vw;
+        background-color: rgb(2, 22, 62);
+        gap: 1em;
+        box-shadow: 0 1px 10px #000;
+      }
+
+      .container-table {
+        flex: 1;
+        height: 100%;
+      }
+
+      .table {
+        height: 100%;
+        border: 1px solid #ffffff;
+      }
+
+      .category-column {
+        overflow: auto;
+        display: flex;
+      }
+      .buttons {
+        height: 10%;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .button {
+        border: none;
+        font-weight: 600;
+        color: white;
+        background-color: cyan;
+        padding: 0.7em 3em;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .add {
+        background-color: rgb(244, 216, 57);
+      }
+
+      .update {
+        background-color: #47f77f;
+      }
+
+      .delete {
+        background-color: #f74747;
+      }
+
+      .category-column .items,
+      .category-column .id {
+        color: rgb(38, 253, 242);
+        background-color: rgba(232, 232, 232, 0.75);
+      }
+
+      .product:hover {
+        background-color: #918e8ead;
+        color: black;
+      }
+
+      .items,
+      .item,
+      .id {
+        border: 1px solid white;
+      }
+
+      .id {
+        flex: 0.2;
+        padding: 0.4em;
+      }
+
+      .items,
+      .item {
+        align-items: center;
+        flex: 0.5;
+        padding: 0.2em;
+      }
+
+      .form {
+        background-color: #413e3e;
+        flex-wrap: wrap;
+        flex: 0.4;
+        flex-direction: column;
+        padding: 1.2em;
+        gap: 0.4em;
+        margin: 0 auto;
+      }
+
+      label {
+        color: #ffffffad;
+      }
+
+      input[type="text"],
+      .price,
+      .stock {
+        font-size: 1.2em;
+        padding: 0.4rem;
+        background: #ffffff;
+        border: none;
+        outline: none;
+      }
+
+      input[type="submit"] {
+        border: none;
+        font-weight: 600;
+        color: white;
+        background-color: cyan;
+        padding: 0.7em 3em;
+        margin: 0 auto;
+      }
+
+      input[type="submit"]:hover {
+        color: cyan;
+        background-color: white;
+      }
+
+      .active {
+        background-color: #918e8ead;
+      }
+    </style>
+  </head>
+
+  <body></body>
+</html>
